@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function CheckboxesGroup() {
+export default function CheckboxesGroupDobro() {
     const classes = useStyles();
     const [state, setState] = React.useState({
         1: true,

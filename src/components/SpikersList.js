@@ -18,14 +18,13 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
         maxWidth: 752,
     },
     demo: {
         backgroundColor: theme.palette.background.paper,
     },
     title: {
-        margin: theme.spacing(2, 0, 0),
+        /*margin: theme.spacing(2, 0, 0),*/
     },
 }));
 
@@ -45,9 +44,7 @@ export default function SpikersList() {
     return (
         <div className={classes.root}>
 
-
-            <Grid container spacing={1}>
-
+            <Grid container >
                 <Grid item xs={12} md={6}>
                     <Typography variant="h4" className={classes.title}>
                         Список спикеров
@@ -56,14 +53,8 @@ export default function SpikersList() {
                         <List dense={dense}>
                             {generate(
                                 <ListItem>
-                                    {/*<ListItemAvatar>
-                                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                    </ListItemAvatar>*/}
-                                    <ListItemText
-                                        primary="Фамилия Имя Отчество"
-                                      /*  secondary={secondary ? 'Secondary text' : null}*/
-                                    />
-                                </ListItem>,
+                                    <ListItemText primary="Фамилия Имя Отчество"/>
+                                </ListItem>
                             )}
                         </List>
                     </div>

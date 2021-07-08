@@ -1,9 +1,25 @@
 import React from 'react';
-import {AppBar, Drawer, List, ListItem, ListItemText, makeStyles, Toolbar, Typography} from "@material-ui/core";
-import {useHistory, useLocation} from "react-router";
+import {
+    AppBar,
+    Container,
+    Drawer,
+    List,
+    ListItem,
+    ListItemText,
+    makeStyles,
+    Toolbar,
+    Typography
+} from "@material-ui/core";
+import {Route, useHistory, useLocation} from "react-router";
+import PrimarySearchAppBar from "./components/Navigation";
+import CheckboxesGroupDobro from "./components/CheckboxDobro";
+import {Switch} from "react-router-dom";
+import {Events} from "./components/Pages/Events";
+import CheckboxesGroupEvents from "./components/CheckboxDobroEvents";
 
 
 const drawerWidth = 240;
+
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -23,16 +39,20 @@ const useStyles = makeStyles((theme) => {
             display: 'flex'
         },
         active: {
-            background: '#f4f4f4'
+            background: '#4b72bd'
         },
         title: {
             padding: theme.spacing(2)
         },
         appbar: {
             width: `calc(100% - ${drawerWidth}px)`,
-            background: 'lightgray'
+            background: 'primary',
+            color: 'white'
         },
-        toolbar: theme.mixins.toolbar
+        toolbar: theme.mixins.toolbar,
+        sort: {
+            paddingTop: 20
+        }
     }
 })
 
@@ -60,9 +80,7 @@ export function Layout({children}) {
             <AppBar
                 className={classes.appbar}>
                 <Toolbar>
-                    <Typography>
-                        Поиск
-                    </Typography>
+                    <PrimarySearchAppBar/>
                 </Toolbar>
             </AppBar>
 
@@ -87,6 +105,14 @@ export function Layout({children}) {
                         <ListItemText primary={item.text}/>
                     </ListItem>
                 ))}
+
+
+                <div className={classes.sort}>
+                    <Switch>
+                        <Route path="/events-page"><CheckboxesGroupEvents/></Route>
+                        <Route path="/dobro-page"><CheckboxesGroupDobro/></Route>
+                    </Switch>
+                </div>
 
 
             </Drawer>

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function CheckboxesGroupDobro() {
+export default function CheckboxesGroupEvents() {
     const classes = useStyles();
     const [state, setState] = React.useState({
         1: true,
@@ -29,8 +29,8 @@ export default function CheckboxesGroupDobro() {
         setState({ ...state, [event.target.name]: event.target.checked });
     };
 
-    const { a, b, c, d, e } = state;
-    const error = [a, b, c, d, e].filter((v) => v).length !== 2;
+    const { a, b } = state;
+    const error = [a, b].filter((v) => v).length !== 2;
 
     return (
         <div className={classes.root}>
@@ -41,23 +41,11 @@ export default function CheckboxesGroupDobro() {
                 <FormGroup>
                     <FormControlLabel
                         control={<Checkbox checked={a} onChange={handleChange} name="1" />}
-                        label="На рассмотрении"
+                        label="Предстоящие"
                     />
                     <FormControlLabel
                         control={<Checkbox checked={b} onChange={handleChange} name="2" />}
-                        label="Одобрено"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox checked={c} onChange={handleChange} name="3" />}
-                        label="Отклонено"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox checked={d} onChange={handleChange} name="4" />}
-                        label="Просмотрено"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox checked={e} onChange={handleChange} name="5" />}
-                        label="Не просмотрено"
+                        label="Прошедшие"
                     />
                 </FormGroup>
             </FormControl>

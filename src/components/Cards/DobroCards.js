@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
     },
+    card: {
+        margin: 20
+    },
     toolbar: theme.mixins.toolbar,
     content: {
         flexGrow: 1,
@@ -70,7 +73,7 @@ export function DobroCards () {
 
     return (
     <div>
-        <Container>
+        <Container className={classes.card}>
 
                 <Card elevation={5}>
                     <CardHeader
