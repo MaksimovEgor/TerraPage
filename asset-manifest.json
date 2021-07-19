@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TerraPage/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/TerraPage/static/js/main.847af0d7.chunk.js",
+    "main.js.map": "/TerraPage/static/js/main.847af0d7.chunk.js.map",
+    "runtime-main.js": "/TerraPage/static/js/runtime-main.44d9e20d.js",
+    "runtime-main.js.map": "/TerraPage/static/js/runtime-main.44d9e20d.js.map",
+    "static/js/2.0b030e32.chunk.js": "/TerraPage/static/js/2.0b030e32.chunk.js",
+    "static/js/2.0b030e32.chunk.js.map": "/TerraPage/static/js/2.0b030e32.chunk.js.map",
+    "static/js/3.753f6357.chunk.js": "/TerraPage/static/js/3.753f6357.chunk.js",
+    "static/js/3.753f6357.chunk.js.map": "/TerraPage/static/js/3.753f6357.chunk.js.map",
+    "index.html": "/TerraPage/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/TerraPage/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.0b030e32.chunk.js.LICENSE.txt": "/TerraPage/static/js/2.0b030e32.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44d9e20d.js",
+    "static/js/2.0b030e32.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.847af0d7.chunk.js"
+  ]
+}
